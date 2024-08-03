@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Arrastrar y Soltar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <header>
+            <h1>¿Qué panel es?</h1>
+            <div id="scoreboard">
+                <div id="score">Puntuación: 0/3</div>
+                <div id="lives">Vidas: 3</div>
+            </div>
+        </header>
+
+        <main>
+            <div id="gallery">
+                <!-- Imágenes de paneles -->
+                <img src="assets/images/A_wooden_construction_panel_with_detailed_textures.png" alt="Panel 1" class="draggable" draggable="true" data-match="1">
+                <img src="assets/images/A_metal_construction_panel_with_shiny_surface_and_.png" alt="Panel 2" class="draggable" draggable="true" data-match="2">
+                <img src="assets/images/A_glass_construction_panel_with_reflections_and_tr.png" alt="Panel 3" class="draggable" draggable="true" data-match="3">
+            </div>
+
+            <div id="drop-zone">
+                <img src="assets/images/wooden_silhouette.png" alt="Silueta" id="silhouette" data-current="1">
+            </div>
+        </main>
+
+        <div id="result" class="hidden">
+            <div id="message"></div>
+            <button id="restart">Reiniciar Juego</button>
+        </div>
+
+        <div id="confetti" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
