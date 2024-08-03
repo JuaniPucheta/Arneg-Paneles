@@ -5,8 +5,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(0deg, rgba(255, 0, 0, 0.7), rgba(255, 165, 0, 0.7));
-    animation: gradientWave 5s infinite alternate;
+    background: linear-gradient(135deg, #ff0000, #ff6347, #ff4500, #ff7f50);
+    background-size: 400% 400%;
+    animation: waveAnimation 8s ease-in-out infinite;
     position: relative;
     overflow: hidden;
 }
@@ -104,6 +105,7 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    display: none; /* Ocultar por defecto */
 }
 
 #restart:hover {
@@ -118,29 +120,25 @@ main {
     height: 100%;
     overflow: hidden;
     pointer-events: none;
+    z-index: 20;
 }
 
 .confetti-piece {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #ff4081;
+    width: 8px;
+    height: 8px;
     opacity: 0.9;
     border-radius: 50%;
-    animation: explode 2s ease-out;
+    animation: fall linear infinite;
 }
 
-@keyframes explode {
+@keyframes fall {
     0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-    80% {
-        transform: translateY(0) scale(1);
+        transform: translateY(-10vh) rotate(0deg); /* Comienza justo por encima de la pantalla */
         opacity: 1;
     }
     100% {
-        transform: translateY(300px) scale(0.3);
+        transform: translateY(110vh) rotate(720deg); /* Rota mientras cae más allá del final de la pantalla */
         opacity: 0;
     }
 }
@@ -181,7 +179,7 @@ main {
     }
 }
 
-@keyframes gradientWave {
+@keyframes waveAnimation {
     0% {
         background-position: 0% 50%;
     }
