@@ -31,7 +31,7 @@ function drop(event) {
         showConfetti();
         showMessage('¡Muy bien! Continúa', 'success');
 
-        // Cambiar la silueta actual por la imagen correcta
+        // Mostrar la imagen correcta en el área de la silueta
         silhouette.src = `assets/images/${getImageName(match)}`;
 
         if (score < 3) {

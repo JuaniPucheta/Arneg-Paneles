@@ -48,3 +48,4 @@ Puedes ejecutar el juego abriendo el archivo `index.html` en tu navegador. Hay d
 - *refactor*: Refactorización del código como cambios de nombre de variables o funciones.
 - *style*: Cambios de formato, tabulaciones, espacios o puntos y coma, etc; no afectan al usuario.
 - *test*: Añade tests o refactoriza uno existente.
+- *try*: Intentando que funcione pero todavía no funciona :p
